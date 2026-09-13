@@ -1,0 +1,1632 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Clay Therapy | Handmade Pottery in Towcester</title>
+
+<meta
+  name="description"
+  content="My Clay Therapy — handmade stoneware pottery, workshops and bespoke ceramics from a home studio in Towcester."
+>
+
+<style>
+:root {
+  --ivory:#F2EFE6;
+  --sage:#C8CEC1;
+  --seafoam:#A7B39A;
+  --moss:#5F7468;
+  --ocean:#2F4A4F;
+  --sand:#CDB998;
+  --rust:#9A6B3C;
+  --ink:#3f3a34;
+  --white:#fffdf8;
+  --shadow:0 18px 45px rgba(47,74,79,.12);
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  background:var(--ivory);
+  color:var(--ink);
+  font-family:Georgia, "Montserrat Regular", serif;
+  line-height:1.65;
+}
+
+img {
+  max-width:100%;
+  display:block;
+}
+
+a {
+  color:inherit;
+}
+
+.container {
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+.eyebrow {
+  text-transform:uppercase;
+  letter-spacing:.24em;
+  font-size:.75rem;
+  color:var(--moss);
+  font-weight:700;
+}
+
+h1,
+h2,
+h3 {
+  font-weight:500;
+  line-height:1.1;
+  margin:0 0 1rem;
+}
+
+h1 {
+  font-size:clamp(3rem,7vw,6.7rem);
+  letter-spacing:.03em;
+}
+
+h2 {
+  font-size:clamp(2.2rem,4vw,4rem);
+}
+
+h3 {
+  font-size:1.45rem;
+}
+
+p {
+  margin:0 0 1rem;
+}
+
+/* BUTTONS */
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  padding:.9rem 1.25rem;
+  border-radius:999px;
+  text-decoration:none;
+  border:1px solid var(--ocean);
+  transition:.2s ease;
+  cursor:pointer;
+  font:inherit;
+}
+
+.btn-primary {
+  background:var(--ocean);
+  color:var(--white);
+}
+
+.btn-primary:hover {
+  background:var(--moss);
+  transform:translateY(-2px);
+}
+
+.btn-light {
+  background:transparent;
+  color:var(--ocean);
+}
+
+.btn-light:hover {
+  background:var(--sage);
+}
+
+/* HEADER */
+
+header {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(242,239,230,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(95,116,104,.18);
+}
+
+.nav {
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.logo {
+  width:145px;
+  height:auto;
+  border-radius:50%;
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  gap:1.4rem;
+}
+
+nav a {
+  text-decoration:none;
+  font-size:.95rem;
+}
+
+nav a:hover {
+  color:var(--rust);
+}
+
+/* SHOPPING BAG */
+
+.cart-button {
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  text-decoration:none;
+}
+
+.bag-icon {
+  width:24px;
+  height:24px;
+  fill:none;
+  stroke:var(--ocean);
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition:.2s ease;
+}
+
+.cart-button:hover .bag-icon {
+  stroke:var(--rust);
+  transform:translateY(-1px);
+}
+
+.cart-count {
+  position:absolute;
+  top:-4px;
+  right:-5px;
+  min-width:20px;
+  height:20px;
+  padding:0 4px;
+  border-radius:50%;
+  background:var(--rust);
+  color:white;
+  font:700 12px/20px Arial;
+  text-align:center;
+}
+
+/* HERO */
+
+.hero {
+  min-height:calc(100vh - 78px);
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:5vw;
+  padding:5rem 0;
+}
+
+.hero-copy {
+  max-width:680px;
+}
+
+.hero-copy p {
+  font-size:1.2rem;
+  max-width:590px;
+  color:#5a554e;
+}
+
+.hero-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.8rem;
+  margin-top:1.6rem;
+}
+
+/*
+  IMPORTANT:
+  The hero image keeps its original aspect ratio.
+  There is no fixed height, max-height or object-fit:cover.
+  This prevents the photograph from being cropped.
+*/
+
+.hero-image {
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+
+.hero-image img {
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  max-height:none;
+  object-fit:initial;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+.badge {
+  position:absolute;
+  left:-24px;
+  bottom:24px;
+  background:var(--white);
+  padding:1rem 1.1rem;
+  border:1px solid rgba(95,116,104,.2);
+  box-shadow:var(--shadow);
+  max-width:220px;
+}
+
+/* SECTIONS */
+
+.section {
+  padding:6rem 0;
+}
+
+.section-alt {
+  background:var(--white);
+}
+
+.section-head {
+  display:flex;
+  justify-content:space-between;
+  gap:2rem;
+  align-items:end;
+  margin-bottom:2.5rem;
+}
+
+.section-head p {
+  max-width:500px;
+  color:#6a645c;
+}
+
+.about-grid {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:4rem;
+  align-items:center;
+}
+
+.about-card {
+  background:var(--sage);
+  padding:2.5rem;
+  border-radius:8px;
+}
+
+.about-card blockquote {
+  font-size:1.45rem;
+  margin:0;
+  color:var(--ocean);
+}
+
+.palette {
+  display:flex;
+  gap:.55rem;
+  margin-top:1.5rem;
+}
+
+.swatch {
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:2px solid var(--ivory);
+  box-shadow:0 0 0 1px rgba(0,0,0,.08);
+}
+
+.shop-intro {
+  max-width:640px;
+}
+
+/* PRODUCTS */
+
+.products {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.4rem;
+}
+
+.product {
+  background:var(--white);
+  border:1px solid rgba(95,116,104,.18);
+  border-radius:10px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 8px 25px rgba(47,74,79,.06);
+}
+
+.product img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  background:var(--sage);
+}
+
+.product-body {
+  padding:1.25rem;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.product-top {
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.price {
+  color:var(--rust);
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.product-body p {
+  color:#6a645c;
+  font-size:.95rem;
+}
+
+.product .btn {
+  margin-top:auto;
+  width:100%;
+}
+
+.note {
+  margin-top:1.5rem;
+  padding:1rem 1.2rem;
+  background:var(--sage);
+  border-left:4px solid var(--moss);
+}
+
+/* WORKSHOPS */
+
+.workshops {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem;
+}
+
+.workshop {
+  padding:2rem;
+  border:1px solid rgba(95,116,104,.25);
+  border-radius:8px;
+  background:var(--ivory);
+}
+
+/* CONTACT */
+
+.contact {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  align-items:start;
+}
+
+.contact-list {
+  list-style:none;
+  padding:0;
+  margin:1.5rem 0 0;
+}
+
+.contact-list li {
+  padding:.75rem 0;
+  border-bottom:1px solid rgba(95,116,104,.2);
+}
+
+form {
+  display:grid;
+  gap:.9rem;
+}
+
+label {
+  font-size:.9rem;
+  color:var(--moss);
+}
+
+input,
+textarea {
+  width:100%;
+  padding:.9rem 1rem;
+  border:1px solid rgba(95,116,104,.35);
+  border-radius:6px;
+  background:var(--white);
+  font:inherit;
+  color:var(--ink);
+}
+
+textarea {
+  min-height:140px;
+  resize:vertical;
+}
+
+/* FOOTER */
+
+footer {
+  background:var(--ocean);
+  color:var(--ivory);
+  padding:3rem 0;
+}
+
+.footer-inner {
+  display:flex;
+  justify-content:space-between;
+  gap:2rem;
+  align-items:center;
+}
+
+/* CART MODAL */
+
+.modal {
+  position:fixed;
+  inset:0;
+  background:rgba(47,74,79,.45);
+  display:none;
+  align-items:flex-end;
+  justify-content:flex-end;
+  z-index:50;
+}
+
+.modal.open {
+  display:flex;
+}
+
+.cart-panel {
+  width:min(440px,100%);
+  height:100%;
+  background:var(--white);
+  padding:1.5rem;
+  box-shadow:-20px 0 50px rgba(0,0,0,.18);
+  overflow:auto;
+}
+
+.cart-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #ddd;
+  padding-bottom:1rem;
+}
+
+.close {
+  border:0;
+  background:none;
+  font-size:1.7rem;
+  cursor:pointer;
+  color:var(--ocean);
+}
+
+.cart-item {
+  display:grid;
+  grid-template-columns:70px 1fr auto;
+  gap:.8rem;
+  align-items:center;
+  padding:1rem 0;
+  border-bottom:1px solid #e4e0d7;
+}
+
+.cart-item img {
+  width:70px;
+  height:70px;
+  object-fit:cover;
+  border-radius:5px;
+}
+
+.qty {
+  display:flex;
+  align-items:center;
+  gap:.45rem;
+  margin-top:.35rem;
+}
+
+.qty button {
+  width:26px;
+  height:26px;
+  border:1px solid #bbb;
+  background:var(--ivory);
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.cart-total {
+  display:flex;
+  justify-content:space-between;
+  font-size:1.25rem;
+  margin:1.5rem 0;
+}
+
+.small {
+  font-size:.82rem;
+  color:#746e65;
+}
+
+/* TABLET / MOBILE */
+
+@media (max-width:850px) {
+
+  nav a:not(.cart-button) {
+    display:none;
+  }
+
+  .hero,
+  .about-grid,
+  .contact {
+    grid-template-columns:1fr;
+  }
+
+  .hero {
+    padding:3rem 0 4rem;
+  }
+
+  .hero-image {
+    order:-1;
+    width:100%;
+  }
+
+  /*
+    Mobile also preserves the original photo proportions.
+  */
+
+  .hero-image img {
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:100%;
+    max-height:none;
+    object-fit:initial;
+  }
+
+  .badge {
+    left:12px;
+  }
+
+  .products {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .workshops {
+    grid-template-columns:1fr;
+  }
+
+  .footer-inner {
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width:500px) {
+
+  .products {
+    grid-template-columns:1fr;
+  }
+
+  nav {
+    gap:.5rem;
+  }
+
+  .logo {
+    width:120px;
+  }
+
+  .hero {
+    padding-top:2rem;
+  }
+
+  .hero-image img {
+    border-radius:8px;
+  }
+
+  .bag-icon {
+    width:23px;
+    height:23px;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+  <nav class="nav container">
+
+    <img
+      src="my_clay_therapy_website_new_new_logo.png"
+      alt="My Clay Therapy"
+      class="logo"
+    >
+
+    <nav>
+
+      <a href="#shop">Shop</a>
+
+      <a href="#workshops">Workshops</a>
+
+      <a href="#contact">Contact</a>
+
+      <a
+        href="#"
+        class="cart-button"
+        onclick="openCart(event)"
+        aria-label="Open shopping bag"
+      >
+
+        <svg
+          class="bag-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M6 8h12l1 13H5L6 8Z"></path>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+        </svg>
+
+        <span
+          id="cartCount"
+          class="cart-count"
+        >0</span>
+
+      </a>
+
+    </nav>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-copy">
+
+    <h1>
+      Handmade pottery for calm &amp; connection
+    </h1>
+
+    <p>
+      Beautifully crafted stoneware pieces designed to slow down everyday
+      rituals. Each item is made by hand in my Towcester studio, inspired
+      by organic forms and tactile textures.
+    </p>
+
+    <div class="hero-actions">
+
+      <a
+        href="#shop"
+        class="btn btn-primary"
+      >
+        Explore the shop
+      </a>
+
+      <a
+        href="#workshops"
+        class="btn btn-light"
+      >
+        Book a workshop
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="container hero-image">
+
+    <img
+      src="my_clay_therapy_website_bio.jpeg"
+      alt="Charmaine holding handmade ceramic bowl"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section
+  id="shop"
+  class="section section-alt"
+>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="shop-intro">
+
+        <div class="eyebrow">
+          Shop
+        </div>
+
+        <h2>
+          Handmade ceramic pieces
+        </h2>
+
+      </div>
+
+      <p>
+        Each piece is one-of-a-kind, created by hand in our studio.
+        All items are food-safe and designed to become part of your
+        everyday rituals.
+      </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+      <!-- BOWL -->
+
+      <article
+        class="product"
+        data-name="Bowl"
+        data-price="30"
+        data-image="my_clay_therapy_website_bowl.jpeg"
+      >
+
+        <img
+          src="my_clay_therapy_website_bowl.jpeg"
+          alt="Handmade ceramic bowl"
+        >
+
+        <div class="product-body">
+
+          <div class="product-top">
+
+            <h3>
+              Bowl
+            </h3>
+
+            <span class="price">
+              £30
+            </span>
+
+          </div>
+
+          <p></p>
+
+          <button
+            class="btn btn-primary"
+            onclick="addToCart(this)"
+          >
+            Add to bag
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- BUD VASE -->
+
+      <article
+        class="product"
+        data-name="Bud Vase"
+        data-price="20"
+        data-image="my_clay_therapy_website_bud_vase.jpeg"
+      >
+
+        <img
+          src="my_clay_therapy_website_bud_vase.jpeg"
+          alt="Handmade ceramic bud vase"
+        >
+
+        <div class="product-body">
+
+          <div class="product-top">
+
+            <h3>
+              Bud Vase
+            </h3>
+
+            <span class="price">
+              £20
+            </span>
+
+          </div>
+
+          <p></p>
+
+          <button
+            class="btn btn-primary"
+            onclick="addToCart(this)"
+          >
+            Add to bag
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- MUG -->
+
+      <article
+        class="product"
+        data-name="Mug"
+        data-price="28"
+        data-image="my_clay_therapy_website_mug.jpeg"
+      >
+
+        <img
+          src="my_clay_therapy_website_mug.jpeg"
+          alt="Handmade ceramic mug"
+        >
+
+        <div class="product-body">
+
+          <div class="product-top">
+
+            <h3>
+              Mug
+            </h3>
+
+            <span class="price">
+              £28
+            </span>
+
+          </div>
+
+          <p></p>
+
+          <button
+            class="btn btn-primary"
+            onclick="addToCart(this)"
+          >
+            Add to bag
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- OIL BURNER -->
+
+      <article
+        class="product"
+        data-name="Oil Pourer"
+        data-price="20"
+        data-image="my_clay_therapy_website_oil.jpeg"
+      >
+
+        <img
+          src="my_clay_therapy_website_oil.jpeg"
+          alt="Handmade ceramic oil burner"
+        >
+
+        <div class="product-body">
+
+          <div class="product-top">
+
+            <h3>
+              Oil Pourer
+            </h3>
+
+            <span class="price">
+              £20
+            </span>
+
+          </div>
+
+          <p></p>
+
+          <button
+            class="btn btn-primary"
+            onclick="addToCart(this)"
+          >
+            Add to bag
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- SALT CELLAR -->
+
+      <article
+        class="product"
+        data-name="Salt pig"
+        data-price="20"
+        data-image="my_clay_therapy_website_salt.jpeg"
+      >
+
+        <img
+          src="my_clay_therapy_website_salt.jpeg"
+          alt="Handmade ceramic salt cellar"
+        >
+
+        <div class="product-body">
+
+          <div class="product-top">
+
+            <h3>
+              Salt pig
+            </h3>
+
+            <span class="price">
+              £20
+            </span>
+
+          </div>
+
+          <p></p>
+
+          <button
+            class="btn btn-primary"
+            onclick="addToCart(this)"
+          >
+            Add to bag
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- TEA LIGHT HOLDER -->
+
+      <article
+        class="product"
+        data-name="Tea Light Holder"
+        data-price="15"
+        data-image="my_clay_therapy_website_tea_light_holder.jpeg"
+      >
+
+        <img
+          src="my_clay_therapy_website_tea_light_holder.jpeg"
+          alt="Handmade ceramic tea light holder"
+        >
+
+        <div class="product-body">
+
+          <div class="product-top">
+
+            <h3>
+              Tea Light Holder
+            </h3>
+
+            <span class="price">
+              £15
+            </span>
+
+          </div>
+
+          <p></p>
+
+          <button
+            class="btn btn-primary"
+            onclick="addToCart(this)"
+          >
+            Add to bag
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- VASE -->
+
+      <article
+        class="product"
+        data-name="Vase"
+        data-price="18"
+        data-image="my_clay_therapy_website_vase.jpeg"
+      >
+
+        <img
+          src="my_clay_therapy_website_vase.jpeg"
+          alt="Handmade ceramic vase"
+        >
+
+        <div class="product-body">
+
+          <div class="product-top">
+
+            <h3>
+              Vase
+            </h3>
+
+            <span class="price">
+              £18
+            </span>
+
+          </div>
+
+          <p></p>
+
+          <button
+            class="btn btn-primary"
+            onclick="addToCart(this)"
+          >
+            Add to bag
+          </button>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WORKSHOPS -->
+
+<section
+  id="workshops"
+  class="section section-alt"
+>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="eyebrow">
+          Create with clay
+        </div>
+
+        <h2>
+          Workshops &amp; creative sessions
+        </h2>
+
+      </div>
+
+      <p>
+        Relaxed, hands-on clay experiences for schools, community groups,
+        charitable organisations and private sessions.
+      </p>
+
+    </div>
+
+
+    <div class="workshops">
+
+      <div class="workshop">
+
+        <h3>
+          Hand-building workshops
+        </h3>
+
+        <p>
+          Discover the joy of working with clay in a supportive, mindful
+          setting. Sessions can be tailored to your group and experience level.
+        </p>
+
+        <a
+          class="btn btn-light"
+          href="#contact"
+        >
+          Enquire
+        </a>
+
+      </div>
+
+
+      <div class="workshop">
+
+        <h3>
+          Bespoke commissions
+        </h3>
+
+        <p>
+          Have an idea for a special ceramic piece? Get in touch to discuss
+          a custom shape, glaze, size or set.
+        </p>
+
+        <a
+          class="btn btn-light"
+          href="#contact"
+        >
+          Discuss a commission
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section
+  id="contact"
+  class="section"
+>
+
+  <div class="container contact">
+
+    <div>
+
+      <div class="eyebrow">
+        Say hello
+      </div>
+
+      <h2>
+        Let's make something lovely.
+      </h2>
+
+      <p>
+        For pottery enquiries, workshops, commissions or collection
+        information, get in touch.
+      </p>
+
+
+      <ul class="contact-list">
+
+        <li>
+          <strong>Studio</strong><br>
+          Towcester, Northamptonshire
+        </li>
+
+        <li>
+          <strong>Email</strong><br>
+
+          <a href="myclaytherapy22@gmail.com">
+            myclaytherapy22@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <strong>Instagram</strong><br>
+
+          <a href="#">
+            @myclaytherapy
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <form onsubmit="sendMessage(event)">
+
+      <label for="name">
+        Name
+      </label>
+
+      <input
+        id="name"
+        required
+        placeholder="Your name"
+      >
+
+
+      <label for="email">
+        Email
+      </label>
+
+      <input
+        id="email"
+        type="email"
+        required
+        placeholder="you@example.com"
+      >
+
+
+      <label for="message">
+        Message
+      </label>
+
+      <textarea
+        id="message"
+        required
+        placeholder="Tell me what you're looking for..."
+      ></textarea>
+
+
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        Send enquiry
+      </button>
+
+      <p
+        id="formMessage"
+        class="small"
+      ></p>
+
+    </form>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+
+      <strong>
+        My Clay Therapy
+      </strong>
+
+      <br>
+
+      <span
+        class="small"
+        style="color:#F2EFE6"
+      >
+        Handmade pottery from Towcester
+      </span>
+
+    </div>
+
+    <div>
+      © <span id="year"></span> My Clay Therapy
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- SHOPPING CART -->
+
+<div
+  id="cartModal"
+  class="modal"
+  onclick="if(event.target===this) closeCart()"
+>
+
+  <aside
+    class="cart-panel"
+    aria-label="Shopping bag"
+  >
+
+    <div class="cart-head">
+
+      <h2 style="font-size:2rem">
+        Your bag
+      </h2>
+
+      <button
+        class="close"
+        onclick="closeCart()"
+        aria-label="Close"
+      >
+        &times;
+      </button>
+
+    </div>
+
+
+    <div id="cartItems"></div>
+
+
+    <div class="cart-total">
+
+      <strong>
+        Total
+      </strong>
+
+      <strong id="cartTotal">
+        £0.00
+      </strong>
+
+    </div>
+
+
+    <button
+      class="btn btn-primary"
+      style="width:100%"
+      onclick="checkout()"
+    >
+      Enquire about your order
+    </button>
+
+  </aside>
+
+</div>
+
+
+<script>
+
+let cart = [];
+
+
+function addToCart(button) {
+
+  const product = button.closest('.product');
+
+  const name = product.dataset.name;
+  const price = Number(product.dataset.price);
+  const image = product.dataset.image;
+
+  const existing = cart.find(
+    item => item.name === name
+  );
+
+  if (existing) {
+
+    existing.qty++;
+
+  } else {
+
+    cart.push({
+      name,
+      price,
+      image,
+      qty:1
+    });
+
+  }
+
+  renderCart();
+  openCart();
+}
+
+
+function renderCart() {
+
+  const count = cart.reduce(
+    (sum,item) => sum + item.qty,
+    0
+  );
+
+  document.getElementById(
+    'cartCount'
+  ).textContent = count;
+
+
+  const items =
+    document.getElementById('cartItems');
+
+
+  if (!cart.length) {
+
+    items.innerHTML =
+      '<p style="padding:2rem 0">Your bag is empty.</p>';
+
+  } else {
+
+    items.innerHTML = cart.map(
+      (item,index) => `
+
+        <div class="cart-item">
+
+          <img
+            src="${item.image}"
+            alt=""
+          >
+
+          <div>
+
+            <strong>
+              ${escapeHtml(item.name)}
+            </strong>
+
+            <div class="small">
+              £${item.price.toFixed(2)} each
+            </div>
+
+            <div class="qty">
+
+              <button
+                onclick="changeQty(${index},-1)"
+                aria-label="Decrease quantity"
+              >
+                −
+              </button>
+
+              <span>
+                ${item.qty}
+              </span>
+
+              <button
+                onclick="changeQty(${index},1)"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+
+            </div>
+
+          </div>
+
+          <strong>
+            £${(
+              item.price * item.qty
+            ).toFixed(2)}
+          </strong>
+
+        </div>
+
+      `
+    ).join('');
+
+  }
+
+
+  const total = cart.reduce(
+    (sum,item) =>
+      sum + item.price * item.qty,
+    0
+  );
+
+  document.getElementById(
+    'cartTotal'
+  ).textContent =
+    '£' + total.toFixed(2);
+}
+
+
+function changeQty(index, amount) {
+
+  cart[index].qty += amount;
+
+  if (cart[index].qty <= 0) {
+    cart.splice(index,1);
+  }
+
+  renderCart();
+}
+
+
+function openCart(e) {
+
+  if (e) {
+    e.preventDefault();
+  }
+
+  document
+    .getElementById('cartModal')
+    .classList.add('open');
+}
+
+
+function closeCart() {
+
+  document
+    .getElementById('cartModal')
+    .classList.remove('open');
+}
+
+
+function checkout() {
+
+  if (!cart.length) {
+
+    alert('Your bag is empty.');
+    return;
+
+  }
+
+
+  const lines = cart.map(
+    item =>
+      `${item.name} x ${item.qty} — £${(
+        item.price * item.qty
+      ).toFixed(2)}`
+  ).join('%0D%0A');
+
+
+  const total = cart.reduce(
+    (sum,item) =>
+      sum + item.price * item.qty,
+    0
+  ).toFixed(2);
+
+
+  const subject =
+    encodeURIComponent(
+      'Pottery order enquiry'
+    );
+
+
+  const body =
+    `Hello Charmaine,%0D%0A%0D%0AI would like to enquire about:%0D%0A${lines}%0D%0A%0D%0ATotal: £${total}%0D%0A%0D%0AName:%0D%0APhone / collection details:%0D%0A`;
+
+
+  window.location.href =
+    `mailto:myclaytherapy22@gmail.com?subject=${subject}&body=${body}`;
+}
+
+
+function sendMessage(event) {
+
+  event.preventDefault();
+
+
+  const name =
+    document.getElementById('name').value;
+
+  const email =
+    document.getElementById('email').value;
+
+  const message =
+    document.getElementById('message').value;
+
+
+  const subject =
+    encodeURIComponent(
+      'My Clay Therapy enquiry from ' + name
+    );
+
+
+  const body =
+    encodeURIComponent(
+      message +
+      '\n\nReply to: ' +
+      email
+    );
+
+
+  window.location.href =
+    `mailto:myclaytherapy22@gmail.com?subject=${subject}&body=${body}`;
+
+
+  document.getElementById(
+    'formMessage'
+  ).textContent =
+    'Opening your email app…';
+}
+
+
+function escapeHtml(text) {
+
+  return text.replace(
+    /[&<>"']/g,
+
+    c => ({
+      '&':'&amp;',
+      '<':'&lt;',
+      '>':'&gt;',
+      '"':'&quot;',
+      "'":'&#039;'
+    }[c])
+  );
+}
+
+
+document.getElementById(
+  'year'
+).textContent =
+  new Date().getFullYear();
+
+
+renderCart();
+
+</script>
+
+</body>
+</html>
+```
